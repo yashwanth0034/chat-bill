@@ -1,0 +1,730 @@
+/* =========================================
+   MENU CARDS - BIGGER
+========================================= */
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+.menu-item {
+  background: white;
+
+  min-height: 155px;
+
+  padding: 18px 14px;
+
+  border-radius: 18px;
+
+  border: 2px solid #ffd166;
+
+  box-shadow: 0 5px 12px rgba(110, 60, 0, 0.12);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  text-align: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   CHAT NAME - BIG
+========================================= */
+
+.food-details h3 {
+  margin: 0 0 7px;
+
+  color: #45200d;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PRICE - BIG
+========================================= */
+
+.price {
+  margin: 0;
+
+  color: #d84315;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   PLUS / MINUS - MEDIUM
+========================================= */
+
+.quantity-btn {
+  width: 44px;
+
+  height: 44px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 27px;
+
+  font-weight: bold;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   QUANTITY NUMBER
+========================================= */
+
+.quantity {
+  min-width: 27px;
+
+  text-align: center;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  color: #4a2410;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .menu {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .menu-item {
+    min-height: 75px;
+
+    padding: 12px;
+
+    flex-direction: row;
+
+    text-align: left;
+  }
+
+  .food-details {
+    text-align: left;
+  }
+
+  .food-details h3 {
+    font-size: 17px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .quantity-btn {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 25px;
+  }
+
+  .quantity {
+    font-size: 19px;
+  }
+
+}
+/* =========================================
+   RECEIPT OVERLAY
+========================================= */
+
+.receipt-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  z-index: 1000;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   RECEIPT
+========================================= */
+
+.receipt {
+  width: 100%;
+
+  max-width: 430px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   RECEIPT HEADER
+========================================= */
+
+.receipt-header {
+  text-align: center;
+
+  border-bottom: 2px dashed #999;
+
+  padding-bottom: 15px;
+}
+
+.receipt-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #8e2409;
+}
+
+.receipt-header p {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #666;
+}
+
+
+/* =========================================
+   RECEIPT INFO
+========================================= */
+
+.receipt-info {
+  padding: 12px 0;
+
+  border-bottom: 1px dashed #bbb;
+}
+
+.receipt-info p {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   RECEIPT ITEMS
+========================================= */
+
+.receipt-items {
+  padding: 8px 0;
+}
+
+.receipt-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 9px 0;
+
+  font-size: 14px;
+
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-item strong {
+  color: #d84315;
+}
+
+
+/* =========================================
+   RECEIPT TOTAL
+========================================= */
+
+.receipt-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 12px;
+
+  padding-top: 14px;
+
+  border-top: 3px solid #8e2409;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: #8e2409;
+}
+
+.receipt-total strong {
+  color: #d84315;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   RECEIPT BUTTONS
+========================================= */
+
+.receipt-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.print-btn,
+.close-btn {
+  flex: 1;
+
+  border: none;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.print-btn {
+  background: #138a36;
+
+  color: white;
+}
+
+.close-btn {
+  background: #e0e0e0;
+
+  color: #333;
+}
+
+
+/* =========================================
+   RECEIPT OVERLAY
+========================================= */
+
+.receipt-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  z-index: 1000;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   RECEIPT
+========================================= */
+
+.receipt {
+  width: 100%;
+
+  max-width: 430px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   RECEIPT HEADER
+========================================= */
+
+.receipt-header {
+  text-align: center;
+
+  border-bottom: 2px dashed #999;
+
+  padding-bottom: 15px;
+}
+
+.receipt-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #8e2409;
+}
+
+.receipt-header p {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #666;
+}
+
+
+/* =========================================
+   RECEIPT INFO
+========================================= */
+
+.receipt-info {
+  padding: 12px 0;
+
+  border-bottom: 1px dashed #bbb;
+}
+
+.receipt-info p {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   RECEIPT ITEMS
+========================================= */
+
+.receipt-items {
+  padding: 8px 0;
+}
+
+.receipt-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 9px 0;
+
+  font-size: 14px;
+
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-item strong {
+  color: #d84315;
+}
+
+
+/* =========================================
+   RECEIPT TOTAL
+========================================= */
+
+.receipt-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 12px;
+
+  padding-top: 14px;
+
+  border-top: 3px solid #8e2409;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: #8e2409;
+}
+
+.receipt-total strong {
+  color: #d84315;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   RECEIPT BUTTONS
+========================================= */
+
+.receipt-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.print-btn,
+.close-btn {
+  flex: 1;
+
+  border: none;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.print-btn {
+  background: #138a36;
+
+  color: white;
+}
+
+.close-btn {
+  background: #e0e0e0;
+
+  color: #333;
+}
+
+
+/* =========================================
+   PRINT RECEIPT - SINGLE PAGE
+========================================= */
+
+@media print {
+
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 80mm;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt-overlay,
+  .receipt-overlay * {
+    visibility: visible;
+  }
+
+  .receipt-overlay {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 80mm;
+
+    margin: 0;
+    padding: 0;
+
+    background: white;
+  }
+
+  .receipt {
+    width: 80mm;
+
+    max-width: 80mm;
+
+    margin: 0;
+
+    padding: 8mm;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    background: white;
+  }
+
+  .receipt-header {
+    padding-bottom: 8px;
+  }
+
+  .receipt-header h2 {
+    font-size: 16px;
+  }
+
+  .receipt-header p {
+    font-size: 11px;
+  }
+
+  .receipt-info p {
+    font-size: 10px;
+
+    margin: 3px 0;
+  }
+
+  .receipt-item {
+    font-size: 11px;
+
+    padding: 5px 0;
+  }
+
+  .receipt-total {
+    font-size: 16px;
+
+    margin-top: 8px;
+
+    padding-top: 8px;
+  }
+
+  .receipt-total strong {
+    font-size: 19px;
+  }
+
+  .receipt-actions {
+    display: none !important;
+  }
+}
+
+
+/* =========================================
+   MOBILE RECEIPT
+========================================= */
+
+@media (max-width: 500px) {
+
+  .receipt {
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+  .receipt-header h2 {
+    font-size: 18px;
+  }
+
+}
+/* =========================================
+   UPI PAYMENT QR
+========================================= */
+
+.payment-qr {
+  text-align: center;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top: 2px dashed #bbb;
+}
+
+.payment-qr h3 {
+  margin: 0 0 12px;
+
+  font-size: 16px;
+
+  color: #8e2409;
+}
+
+.payment-qr svg {
+  display: block;
+
+  margin: auto;
+
+  padding: 8px;
+
+  background: white;
+
+  border: 2px solid #222;
+
+  border-radius: 8px;
+}
+
+.pay-amount {
+  margin: 10px 0 4px;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: #138a36;
+}
+
+.scan-text {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+

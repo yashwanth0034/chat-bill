@@ -1,0 +1,282 @@
+/* =========================================
+   MENU DASHBOARD
+========================================= */
+
+.menu {
+  display: grid;
+
+  /* Desktop: 3 items side by side */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   MENU ITEM CARD
+========================================= */
+
+.menu-item {
+  background: white;
+
+  min-height: 135px;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  border: 2px solid #ffd166;
+
+  box-shadow: 0 5px 12px rgba(110, 60, 0, 0.12);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  text-align: center;
+
+  gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+
+/* Selected item */
+
+.menu-item.selected-item {
+  border-color: #ff9800;
+
+  background: #fff8e7;
+
+  box-shadow: 0 6px 15px rgba(255, 152, 0, 0.25);
+}
+
+
+/* =========================================
+   FOOD DETAILS
+========================================= */
+
+.food-details {
+  width: 100%;
+
+  text-align: center;
+}
+
+.food-details h3 {
+  margin: 0 0 6px;
+
+  color: #45200d;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.price {
+  margin: 0;
+
+  color: #d84315;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   QUANTITY CONTROLS
+========================================= */
+
+.quantity-controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   PLUS / MINUS BUTTON
+========================================= */
+
+.quantity-btn {
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 27px;
+
+  font-weight: bold;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  line-height: 1;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18);
+
+  transition: 0.15s ease;
+}
+
+
+/* PLUS */
+
+.plus-btn {
+  background: linear-gradient(
+    135deg,
+    #11998e,
+    #16a085
+  );
+}
+
+.plus-btn:hover {
+  transform: scale(1.08);
+}
+
+
+/* MINUS */
+
+.minus-btn {
+  background: linear-gradient(
+    135deg,
+    #ef5350,
+    #c62828
+  );
+}
+
+.minus-btn:hover {
+  transform: scale(1.08);
+}
+
+
+/* Disabled minus */
+
+.minus-btn:disabled {
+  background: #d6d6d6;
+
+  color: #999;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* Quantity number */
+
+.quantity {
+  min-width: 25px;
+
+  text-align: center;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  color: #4a2410;
+}
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .menu {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .menu-item {
+    min-height: 75px;
+
+    padding: 12px;
+
+    flex-direction: row;
+
+    text-align: left;
+  }
+
+  .food-details {
+    text-align: left;
+  }
+
+  .food-details h3 {
+    font-size: 16px;
+  }
+
+  .quantity-controls {
+    gap: 7px;
+  }
+
+  .quantity-btn {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 25px;
+  }
+
+  .quantity {
+    font-size: 19px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .menu-item {
+    padding: 10px;
+  }
+
+  .quantity-btn {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 23px;
+  }
+
+}

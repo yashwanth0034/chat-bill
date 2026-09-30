@@ -1,730 +1,1290 @@
-/* =========================================
-   MENU CARDS - BIGGER
-========================================= */
+/* ================================
+   SRI VEERABHADHRA CHAT BHAN
+   COLORFUL DASHBOARD DESIGN
+================================ */
 
-.menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
   width: 100%;
 }
 
-.menu-item {
-  background: white;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff8e7;
+  color: #14212b;
+}
 
-  min-height: 155px;
+button {
+  font-family: inherit;
+}
 
-  padding: 18px 14px;
+button:disabled {
+  cursor: not-allowed;
+}
 
-  border-radius: 18px;
+/* ================================
+   MAIN APP
+================================ */
 
-  border: 2px solid #ffd166;
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 5% 20%, rgba(255, 201, 40, 0.18), transparent 20%),
+    radial-gradient(circle at 95% 60%, rgba(52, 211, 153, 0.12), transparent 20%),
+    #fff8e7;
+}
 
-  box-shadow: 0 5px 12px rgba(110, 60, 0, 0.12);
+/* ================================
+   HEADER
+================================ */
 
+.top-header {
+  min-height: 112px;
+  background: #063b4a;
+  color: white;
   display: flex;
-
-  flex-direction: column;
-
   align-items: center;
-
   justify-content: space-between;
+  gap: 25px;
+  padding: 15px 32px;
+  border-radius: 0 0 28px 28px;
+  box-shadow: 0 8px 25px rgba(6, 59, 74, 0.2);
+}
 
-  text-align: center;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 310px;
+}
 
+.brand-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: #ffc928;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.brand h1 {
+  margin: 0;
+  color: #ffc928;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.brand h2 {
+  margin: 2px 0 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #b9e8c8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================================
+   TOP NAVIGATION
+================================ */
+
+.top-nav {
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
+.nav-item {
+  min-width: 85px;
+  padding: 11px 15px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-/* =========================================
-   CHAT NAME - BIG
-========================================= */
+.nav-item span {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 3px;
+}
 
-.food-details h3 {
-  margin: 0 0 7px;
-
-  color: #45200d;
-
-  font-size: 19px;
-
+.nav-item small {
+  font-size: 13px;
   font-weight: 700;
 }
 
-
-/* =========================================
-   PRICE - BIG
-========================================= */
-
-.price {
-  margin: 0;
-
-  color: #d84315;
-
-  font-size: 17px;
-
-  font-weight: 800;
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
+.nav-item.active {
+  background: #ffc928;
+  color: #14212b;
+  box-shadow: 0 5px 15px rgba(255, 201, 40, 0.25);
+}
 
-/* =========================================
-   PLUS / MINUS - MEDIUM
-========================================= */
+/* ================================
+   DATE
+================================ */
 
-.quantity-btn {
-  width: 44px;
-
-  height: 44px;
-
-  border: none;
-
-  border-radius: 50%;
-
-  color: white;
-
-  font-size: 27px;
-
-  font-weight: bold;
-
+.date-box {
   display: flex;
-
   align-items: center;
-
-  justify-content: center;
-
-  cursor: pointer;
-
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18);
+  gap: 10px;
+  background: #07586b;
+  padding: 12px 18px;
+  border-radius: 18px;
+  min-width: 165px;
 }
 
+.date-box > span {
+  font-size: 27px;
+}
 
-/* =========================================
-   QUANTITY NUMBER
-========================================= */
+.date-box strong,
+.date-box small {
+  display: block;
+}
 
-.quantity {
-  min-width: 27px;
+.date-box strong {
+  font-size: 13px;
+}
 
-  text-align: center;
+.date-box small {
+  margin-top: 4px;
+  color: #d5f5f0;
+  font-size: 11px;
+}
 
-  font-size: 21px;
+/* ================================
+   DASHBOARD
+================================ */
 
+.dashboard {
+  width: min(1500px, 96%);
+  margin: 22px auto;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 365px;
+  gap: 18px;
+  align-items: start;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #f0dfb2;
+  border-radius: 22px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(75, 50, 0, 0.08);
+  min-height: 650px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 10px;
+  margin-bottom: 8px;
+  border-radius: 14px;
   font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-  color: #4a2410;
+.side-link span {
+  width: 30px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.side-link:hover {
+  background: #fff2bf;
+}
+
+.side-link.active {
+  background: #ffc928;
+  color: #14212b;
+  box-shadow: 0 5px 14px rgba(255, 201, 40, 0.25);
+}
+
+.good-vibe {
+  margin-top: 80px;
+  text-align: center;
+  color: #08705d;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.good-vibe strong {
+  display: block;
+}
+
+.good-vibe span {
+  display: block;
+  color: #ffc928;
+  font-size: 30px;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  min-width: 0;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: 185px;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 35px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 59, 74, 0.96),
+      rgba(6, 59, 74, 0.72),
+      rgba(6, 59, 74, 0.25)
+    ),
+    linear-gradient(135deg, #ffb703, #ff7a18);
+  box-shadow: 0 8px 22px rgba(75, 50, 0, 0.15);
+}
+
+.hero::after {
+  content: "🌿";
+  position: absolute;
+  right: 30%;
+  top: 15px;
+  font-size: 38px;
+  opacity: 0.7;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-text > span {
+  color: #ffc928;
+  font-size: 20px;
+}
+
+.hero-text h2 {
+  margin: 4px 0 10px;
+  color: white;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-food {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 85px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================================
+   MENU SECTION
+================================ */
+
+.menu-section {
+  margin-top: 18px;
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(75, 50, 0, 0.08);
+}
+
+.menu-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.menu-heading h2 {
+  margin: 0;
+  color: #063b4a;
+  font-size: 24px;
+}
+
+.menu-heading p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.leaf {
+  font-size: 28px;
+}
+
+/* ================================
+   MENU GRID
+================================ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* ================================
+   MENU CARD
+================================ */
 
-@media (max-width: 800px) {
+.menu-card {
+  min-height: 195px;
+  position: relative;
+  border-radius: 18px;
+  padding: 13px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .menu {
-    grid-template-columns: repeat(2, 1fr);
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.12);
+}
 
-    gap: 14px;
+.selected-card {
+  border-color: #0a9f4a;
+  box-shadow: 0 0 0 3px rgba(10, 159, 74, 0.12);
+}
+
+/* CARD COLORS */
+
+.card-0 {
+  background: #fff0b3;
+}
+
+.card-1 {
+  background: #ffd6e0;
+}
+
+.card-2 {
+  background: #c9f7d5;
+}
+
+.card-3 {
+  background: #e3d5ff;
+}
+
+.card-4 {
+  background: #cdefff;
+}
+
+.card-5 {
+  background: #ffe0bf;
+}
+
+.card-6 {
+  background: #c8f7f1;
+}
+
+.card-7 {
+  background: #ffd5e5;
+}
+
+/* repeat colors for cards 9-12 */
+
+.menu-card:nth-child(9) {
+  background: #fff0b3;
+}
+
+.menu-card:nth-child(10) {
+  background: #c9f7d5;
+}
+
+.menu-card:nth-child(11) {
+  background: #cdefff;
+}
+
+.menu-card:nth-child(12) {
+  background: #ffe0bf;
+}
+
+/* ================================
+   POPULAR
+================================ */
+
+.popular {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  background: #f43f5e;
+  color: white;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* ================================
+   FOOD ICON
+================================ */
+
+.food-icon {
+  width: 70px;
+  height: 70px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.food-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Safety: keep every food image inside its card */
+.menu-card > img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+ 
+}
+
+.menu-card h3 {
+  margin: 3px 0;
+  color: #14212b;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.food-price {
+  color: #e03b1e;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* ================================
+   QUANTITY
+================================ */
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quantity-controls button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 21px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quantity-controls .minus {
+  background: #f43f5e;
+}
+
+.quantity-controls .plus {
+  background: #0a9f4a;
+}
+
+.quantity-controls button:disabled {
+  opacity: 0.35;
+}
+
+.quantity-controls span {
+  min-width: 35px;
+  height: 30px;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 9px;
+  font-weight: 900;
+  color: #14212b;
+}
+
+/* ================================
+   RIGHT PANEL
+================================ */
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ================================
+   SELECTED ITEMS
+================================ */
+
+.selected-box {
+  min-height: 315px;
+  background: white;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(75, 50, 0, 0.08);
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-title h2 {
+  margin: 0;
+  color: #14212b;
+  font-size: 19px;
+}
+
+.panel-title > span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0a9f4a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 45px 10px 20px;
+}
+
+.empty-icon {
+  font-size: 58px;
+  margin-bottom: 8px;
+}
+
+.empty-cart h3 {
+  margin: 0 0 8px;
+  color: #14212b;
+  font-size: 17px;
+}
+
+.empty-cart p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.selected-list {
+  margin-top: 18px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.selected-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #d9d9d9;
+  font-size: 13px;
+}
+
+.selected-row strong {
+  color: #d84315;
+}
+
+/* ================================
+   TOTAL
+================================ */
+
+.total-box {
+  background: white;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(75, 50, 0, 0.08);
+}
+
+.total-box h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.big-total {
+  margin: 6px 0 15px;
+  color: #0a9f4a;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.generate-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  background: #0a9f4a;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(10, 159, 74, 0.25);
+  transition: 0.2s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #07853d;
+}
+
+.generate-btn:disabled {
+  opacity: 0.45;
+}
+
+/* ================================
+   PAYMENT CARD
+================================ */
+
+.payment-card {
+  min-height: 210px;
+  padding: 20px;
+  border-radius: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: linear-gradient(135deg, #4338ca, #ec4899);
+  box-shadow: 0 7px 20px rgba(67, 56, 202, 0.22);
+}
+
+.payment-card h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.payment-card p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.payment-apps {
+  display: flex;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.payment-apps span {
+  min-width: 39px;
+  height: 39px;
+  padding: 7px;
+  border-radius: 50%;
+  background: white;
+  color: #14212b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* ================================
+   QR
+================================ */
+
+.small-qr {
+  width: 120px;
+  overflow: hidden;
+}
+
+.small-qr .payment-qr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: white;
+  border-radius: 12px;
+}
+
+.small-qr .payment-qr h3,
+.small-qr .pay-amount,
+.small-qr .scan-text {
+  display: none;
+}
+
+.small-qr .payment-qr img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  padding: 6px;
+  margin: 0;
+  background: white;
+}
+
+.qr-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  background: white;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+  min-height: 85px;
+  margin-top: 25px;
+  padding: 18px 40px;
+  background: #063b4a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.footer strong {
+  display: block;
+  color: #ffc928;
+  margin-top: 3px;
+}
+
+.footer-message {
+  color: #ffc928;
+  font-size: 17px !important;
+  font-weight: 800;
+}
+
+/* ================================
+   RECEIPT OVERLAY
+================================ */
+
+.receipt-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.receipt {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 2px dashed #999;
+  padding-bottom: 15px;
+}
+
+.receipt-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #8e2409;
+}
+
+.receipt-header p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.receipt-info {
+  padding: 12px 0;
+  border-bottom: 1px dashed #bbb;
+}
+
+.receipt-info p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.receipt-items {
+  padding: 8px 0;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-item strong {
+  color: #d84315;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 3px solid #8e2409;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8e2409;
+}
+
+.receipt-total strong {
+  color: #d84315;
+  font-size: 24px;
+}
+
+.receipt-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.print-btn,
+.close-btn {
+  flex: 1;
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.print-btn {
+  background: #138a36;
+  color: white;
+}
+
+.close-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 1200px) {
+  .dashboard {
+    grid-template-columns: 125px minmax(0, 1fr) 320px;
   }
 
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .top-nav {
+    display: none;
+  }
+
+  .brand h1 {
+    font-size: 21px;
+  }
+
+  .brand h2 {
+    font-size: 20px;
+  }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 500px) {
-
-  .menu {
+@media (max-width: 950px) {
+  .dashboard {
     grid-template-columns: 1fr;
+  }
 
+  .sidebar {
+    display: flex;
+    min-height: auto;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .side-link {
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .good-vibe {
+    display: none;
+  }
+
+  .right-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .payment-card {
+    grid-column: 1 / -1;
+  }
+
+  .selected-box {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-header {
+    padding: 12px 15px;
+    min-height: 82px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .brand h1 {
+    font-size: 16px;
+  }
+
+  .brand h2 {
+    font-size: 16px;
+  }
+
+  .brand p {
+    font-size: 10px;
+  }
+
+  .date-box {
+    display: none;
+  }
+
+  .dashboard {
+    width: 94%;
+    margin: 12px auto;
     gap: 12px;
   }
 
-  .menu-item {
-    min-height: 75px;
+  .sidebar {
+    border-radius: 15px;
+  }
 
+  .side-link {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+
+  .side-link span {
+    font-size: 18px;
+  }
+
+  .hero {
+    min-height: 145px;
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 10px;
+  }
+
+  .hero-food {
+    width: 90px;
+    height: 90px;
+    font-size: 52px;
+  }
+
+  .menu-section {
     padding: 12px;
-
-    flex-direction: row;
-
-    text-align: left;
+    border-radius: 18px;
   }
 
-  .food-details {
-    text-align: left;
-  }
-
-  .food-details h3 {
-    font-size: 17px;
-  }
-
-  .price {
-    font-size: 15px;
-  }
-
-  .quantity-btn {
-    width: 40px;
-
-    height: 40px;
-
-    font-size: 25px;
-  }
-
-  .quantity {
+  .menu-heading h2 {
     font-size: 19px;
   }
 
-}
-/* =========================================
-   RECEIPT OVERLAY
-========================================= */
+  .menu-heading p {
+    font-size: 11px;
+  }
 
-.receipt-overlay {
-  position: fixed;
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
 
-  inset: 0;
+  .menu-card {
+    min-height: 170px;
+    padding: 10px 7px;
+    border-radius: 15px;
+  }
 
-  background: rgba(0, 0, 0, 0.65);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 15px;
-
-  z-index: 1000;
-
-  overflow-y: auto;
-}
-
-
-/* =========================================
-   RECEIPT
-========================================= */
-
-.receipt {
-  width: 100%;
-
-  max-width: 430px;
-
-  background: white;
-
-  border-radius: 18px;
-
-  padding: 22px;
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  .food-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 32px;
+     overflow: hidden;
+  }
+  .food-icon img,
+.menu-card > img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
 }
 
+  .menu-card h3 {
+    font-size: 13px;
+  }
 
-/* =========================================
-   RECEIPT HEADER
-========================================= */
+  .food-price {
+    font-size: 16px;
+  }
 
-.receipt-header {
-  text-align: center;
+  .quantity-controls {
+    gap: 5px;
+  }
 
-  border-bottom: 2px dashed #999;
+  .quantity-controls button {
+    width: 29px;
+    height: 29px;
+    font-size: 19px;
+  }
 
-  padding-bottom: 15px;
+  .quantity-controls span {
+    min-width: 30px;
+    height: 27px;
+    padding: 5px;
+  }
+
+  .right-panel {
+    display: flex;
+  }
+
+  .payment-card {
+    min-height: 190px;
+  }
+
+  .footer {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-message {
+    order: -1;
+  }
 }
 
-.receipt-header h2 {
-  margin: 0;
+@media (max-width: 400px) {
+  .brand h1 {
+    font-size: 14px;
+  }
 
-  font-size: 20px;
+  .brand h2 {
+    font-size: 14px;
+  }
 
-  color: #8e2409;
+  .menu-grid {
+    gap: 7px;
+  }
+
+  .menu-card {
+    min-height: 160px;
+  }
+
+  .payment-card {
+    padding: 15px;
+  }
 }
 
-.receipt-header p {
-  margin: 5px 0;
-
-  font-size: 13px;
-
-  color: #666;
-}
-
-
-/* =========================================
-   RECEIPT INFO
-========================================= */
-
-.receipt-info {
-  padding: 12px 0;
-
-  border-bottom: 1px dashed #bbb;
-}
-
-.receipt-info p {
-  margin: 5px 0;
-
-  font-size: 13px;
-
-  color: #444;
-}
-
-
-/* =========================================
-   RECEIPT ITEMS
-========================================= */
-
-.receipt-items {
-  padding: 8px 0;
-}
-
-.receipt-item {
-  display: flex;
-
-  justify-content: space-between;
-
-  padding: 9px 0;
-
-  font-size: 14px;
-
-  border-bottom: 1px dashed #ddd;
-}
-
-.receipt-item strong {
-  color: #d84315;
-}
-
-
-/* =========================================
-   RECEIPT TOTAL
-========================================= */
-
-.receipt-total {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  margin-top: 12px;
-
-  padding-top: 14px;
-
-  border-top: 3px solid #8e2409;
-
-  font-size: 20px;
-
-  font-weight: bold;
-
-  color: #8e2409;
-}
-
-.receipt-total strong {
-  color: #d84315;
-
-  font-size: 24px;
-}
-
-
-/* =========================================
-   RECEIPT BUTTONS
-========================================= */
-
-.receipt-actions {
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 20px;
-}
-
-.print-btn,
-.close-btn {
-  flex: 1;
-
-  border: none;
-
-  padding: 13px;
-
-  border-radius: 10px;
-
-  font-size: 15px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-}
-
-.print-btn {
-  background: #138a36;
-
-  color: white;
-}
-
-.close-btn {
-  background: #e0e0e0;
-
-  color: #333;
-}
-
-
-/* =========================================
-   RECEIPT OVERLAY
-========================================= */
-
-.receipt-overlay {
-  position: fixed;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.65);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 15px;
-
-  z-index: 1000;
-
-  overflow-y: auto;
-}
-
-
-/* =========================================
-   RECEIPT
-========================================= */
-
-.receipt {
-  width: 100%;
-
-  max-width: 430px;
-
-  background: white;
-
-  border-radius: 18px;
-
-  padding: 22px;
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
-}
-
-
-/* =========================================
-   RECEIPT HEADER
-========================================= */
-
-.receipt-header {
-  text-align: center;
-
-  border-bottom: 2px dashed #999;
-
-  padding-bottom: 15px;
-}
-
-.receipt-header h2 {
-  margin: 0;
-
-  font-size: 20px;
-
-  color: #8e2409;
-}
-
-.receipt-header p {
-  margin: 5px 0;
-
-  font-size: 13px;
-
-  color: #666;
-}
-
-
-/* =========================================
-   RECEIPT INFO
-========================================= */
-
-.receipt-info {
-  padding: 12px 0;
-
-  border-bottom: 1px dashed #bbb;
-}
-
-.receipt-info p {
-  margin: 5px 0;
-
-  font-size: 13px;
-
-  color: #444;
-}
-
-
-/* =========================================
-   RECEIPT ITEMS
-========================================= */
-
-.receipt-items {
-  padding: 8px 0;
-}
-
-.receipt-item {
-  display: flex;
-
-  justify-content: space-between;
-
-  padding: 9px 0;
-
-  font-size: 14px;
-
-  border-bottom: 1px dashed #ddd;
-}
-
-.receipt-item strong {
-  color: #d84315;
-}
-
-
-/* =========================================
-   RECEIPT TOTAL
-========================================= */
-
-.receipt-total {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  margin-top: 12px;
-
-  padding-top: 14px;
-
-  border-top: 3px solid #8e2409;
-
-  font-size: 20px;
-
-  font-weight: bold;
-
-  color: #8e2409;
-}
-
-.receipt-total strong {
-  color: #d84315;
-
-  font-size: 24px;
-}
-
-
-/* =========================================
-   RECEIPT BUTTONS
-========================================= */
-
-.receipt-actions {
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 20px;
-}
-
-.print-btn,
-.close-btn {
-  flex: 1;
-
-  border: none;
-
-  padding: 13px;
-
-  border-radius: 10px;
-
-  font-size: 15px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-}
-
-.print-btn {
-  background: #138a36;
-
-  color: white;
-}
-
-.close-btn {
-  background: #e0e0e0;
-
-  color: #333;
-}
-
-
-/* =========================================
-   PRINT RECEIPT - SINGLE PAGE
-========================================= */
+/* ================================
+   80MM THERMAL PRINT
+================================ */
+
+/* ================================
+   RECEIPT PRINTING - 80MM THERMAL
+   ================================ */
+
+/* =====================================
+   A4 RECEIPT PRINT - WEBSITE UNCHANGED
+   ===================================== */
 
 @media print {
 
   @page {
-    size: 80mm auto;
+    size: A4 portrait;
     margin: 0;
   }
 
-  html,
-  body {
-    width: 80mm;
-    margin: 0;
-    padding: 0;
-    background: white;
-  }
-
+  /* Hide the entire website */
   body * {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
+  /* Show only receipt */
   .receipt-overlay,
-  .receipt-overlay * {
-    visibility: visible;
+  .receipt-overlay .receipt,
+  .receipt-overlay .receipt * {
+    visibility: visible !important;
   }
 
+  /* A4 print area */
   .receipt-overlay {
-    position: absolute;
+    position: fixed !important;
+    inset: 0 !important;
 
-    left: 0;
-    top: 0;
+    width: 210mm !important;
+    height: 297mm !important;
 
-    width: 80mm;
+    margin: 0 !important;
+    padding: 0 !important;
 
-    margin: 0;
-    padding: 0;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
 
-    background: white;
+    background: white !important;
+    overflow: hidden !important;
   }
 
+  /* Receipt itself */
   .receipt {
-    width: 80mm;
+    position: relative !important;
 
-    max-width: 80mm;
+    width: 80mm !important;
+    max-width: 80mm !important;
 
-    margin: 0;
+    margin: 15mm auto 0 auto !important;
+    padding: 5mm !important;
 
-    padding: 8mm;
+    background: white !important;
+    color: #000 !important;
 
-    border-radius: 0;
+    box-sizing: border-box !important;
 
-    box-shadow: none;
-
-    background: white;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .receipt-header {
-    padding-bottom: 8px;
+  /* Keep receipt sections together */
+  .receipt-header,
+  .receipt-info,
+  .receipt-items,
+  .receipt-item,
+  .receipt-total,
+  .payment-qr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .receipt-header h2 {
-    font-size: 16px;
-  }
+  /* Center QR */
+.payment-qr {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .receipt-header p {
-    font-size: 11px;
-  }
+.payment-qr .qr-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .receipt-info p {
-    font-size: 10px;
+.payment-qr img {
+  display: block;
+  margin: 0 auto;
+}
 
-    margin: 3px 0;
-  }
+.payment-qr .pay-amount,
+.payment-qr .scan-text {
+  width: 100%;
+  text-align: center;
+}
 
-  .receipt-item {
-    font-size: 11px;
-
-    padding: 5px 0;
-  }
-
-  .receipt-total {
-    font-size: 16px;
-
-    margin-top: 8px;
-
-    padding-top: 8px;
-  }
-
-  .receipt-total strong {
-    font-size: 19px;
-  }
-
+  /* Don't print buttons */
   .receipt-actions {
     display: none !important;
   }
 }
-
-
-/* =========================================
-   MOBILE RECEIPT
-========================================= */
-
-@media (max-width: 500px) {
-
-  .receipt {
-    padding: 18px;
-
-    border-radius: 14px;
-  }
-
-  .receipt-header h2 {
-    font-size: 18px;
-  }
-
-}
-/* =========================================
-   UPI PAYMENT QR
-========================================= */
-
-.payment-qr {
-  text-align: center;
-
-  margin-top: 18px;
-
-  padding-top: 15px;
-
-  border-top: 2px dashed #bbb;
-}
-
-.payment-qr h3 {
-  margin: 0 0 12px;
-
-  font-size: 16px;
-
-  color: #8e2409;
-}
-
-.payment-qr svg {
-  display: block;
-
-  margin: auto;
-
-  padding: 8px;
-
-  background: white;
-
-  border: 2px solid #222;
-
-  border-radius: 8px;
-}
-
-.pay-amount {
-  margin: 10px 0 4px;
-
-  font-size: 20px;
-
-  font-weight: bold;
-
-  color: #138a36;
-}
-
-.scan-text {
-  margin: 0;
-
-  font-size: 11px;
-
-  color: #777;
-}
-
-

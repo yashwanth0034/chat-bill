@@ -475,8 +475,8 @@ button:disabled {
 ================================ */
 
 .food-icon {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin-top: 4px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.65);
@@ -487,12 +487,14 @@ button:disabled {
   flex-shrink: 0;
 }
 
-.food-icon img {
-  width: 100%;
-  height: 100%;
+.food-icon img,
+.menu-card > img {
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  display: block;
   border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* Safety: keep every food image inside its card */
@@ -1097,19 +1099,28 @@ button:disabled {
     border-radius: 15px;
   }
 
-  .food-icon {
-    width: 58px;
-    height: 58px;
-    font-size: 32px;
-     overflow: hidden;
-  }
-  .food-icon img,
-.menu-card > img {
-  width: 58px;
-  height: 58px;
-  object-fit: cover;
+ .food-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
+.food-icon img,
+.menu-card > img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+}
   .menu-card h3 {
     font-size: 13px;
   }
